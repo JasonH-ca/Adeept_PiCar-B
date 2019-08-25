@@ -624,6 +624,8 @@ def run():                   #Main loop
             tcpCliSock.send('8'.encode())
 
         elif 'ahead' in data:                  #Camera look ahead
+            vtr_mid = vtr_mid_orig
+            hoz_mid =	hoz_mid_orig
             turn.ahead()
 
         elif 'Stop' in data:                   #When server receive "Stop" from client,Auto Mode switches off
